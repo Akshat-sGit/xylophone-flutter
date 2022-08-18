@@ -1,25 +1,27 @@
 import 'package:flutter/material.dart';
-// import 'package:english_words/english_words.dart';
 import 'package:audioplayers/audioplayers.dart';
-
 
 void main() => runApp(XylophoneApp());
 
 class XylophoneApp extends StatelessWidget {
+    void playSound()  {
+    AudioPlayer player = new AudioPlayer();
+    player.play(DeviceFileSource('assets/note1.wav'));
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: SafeArea(
-          child: Center(
-            // child: Text(adjectives.first)
-            child: TextButton(
-              onPressed: () {
-                final player = AudioPlayer();
-                player.play(DeviceFileSource('note1.wav'));
-              },
-              child: Text('Click me'),
-            ),
+          child: Column(
+            children: <Widget>[
+              TextButton(
+                  onPressed: () {
+                    playSound();
+                  },
+                  child: Text('Click me')),
+            ],
           ),
         ),
       ),
