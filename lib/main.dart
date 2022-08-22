@@ -16,11 +16,16 @@ class XylophoneApp extends StatelessWidget {
         body: SafeArea(
           child: Column(
             children: <Widget>[
-              TextButton(
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+    primary: Colors.red, // background
+    onPrimary: Colors.white, // foreground
+  ),
                   onPressed: () {
                     playSound();
                   },
-                  child: Text('Click me')),
+                 child: Text('Click Me'),
+              ), 
             ],
           ),
         ),
