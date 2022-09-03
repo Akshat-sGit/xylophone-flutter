@@ -18,9 +18,9 @@ class XylophoneApp extends StatelessWidget {
             children: <Widget>[
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-    primary: Colors.red, // background
-    onPrimary: Colors.white, // foreground
-  ),
+                  primary: Colors.red, // background
+                  onPrimary: Colors.white, // foreground
+                  ),
                   onPressed: () {
                     playSound();
                   },
